@@ -17,4 +17,21 @@ $$
 \beta_g_{j}y ~ N(0, \sigma^2_{h})
 $$
 
-and for each simulation a random value was sampled for \sigma^2_{h} between 0 and 0.2. The effect SNP effects on X were obtained from the discovery dataset using an additive genetic model. Only SNPs with p < 1e-8 were retained for MR and PRS analysis. For MR analysis the SNP effects on Y were obtained from the test dataset and then two-sample MR estimates were obtained. For PRS analysis, the genetic score was constructed in the test dataset using the SNP-exposure effect estimates from the discovery dataset as weights. All code is available here 
+and for each simulation a random value was sampled for \sigma^2_{h} between 0 and 0.2. The effect SNP effects on X were obtained from the discovery dataset using an additive genetic model. Only SNPs with p < 1e-8 were retained for MR and PRS analysis. For MR analysis the SNP effects on Y were obtained from the test dataset and then two-sample MR estimates were obtained. For PRS analysis, the genetic score was constructed in the test dataset using the SNP-exposure effect estimates from the discovery dataset as weights. All code is available here [https://github.com/explodecomputer/prs-vs-mr](https://github.com/explodecomputer/prs-vs-mr).
+
+
+## To run
+
+```r
+Rscript prs_vs_mr_simulation.run.r
+Rscript prs_vs_mr_simulation.plots.r
+```
+
+Creates:
+
+```
+prs_vs_mr_simulation.rdata
+prs_vs_mr_simulation.plot1.pdf
+prs_vs_mr_simulation.plot2.pdf
+```
+
